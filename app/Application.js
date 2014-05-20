@@ -4,15 +4,14 @@ Ext.define('Radio.Application', {
     extend: 'Ext.app.Application',
 
     views: [
-        // TODO: add views here
+        'Radio.view.RadioStationsPanel'
     ],
 
     controllers: [
         'Radio.controller.Radio'
-        // TODO: add controllers here
     ],
 
     stores: [
-        // TODO: add stores here
+        'Radio.store.RadioStations'
     ]
 });

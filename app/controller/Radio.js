@@ -2,7 +2,7 @@ Ext.define('Radio.controller.Radio', {
     extend: 'Ext.app.Controller',
 
     requires: [
-        // 'VP.util.Utils'
+        'Radio.view.RadioStationsPanel'
     ],
 
     stores: [
@@ -41,8 +41,31 @@ Ext.define('Radio.controller.Radio', {
         });
     },
 
+    buttonHandler: function(button) {
+        console.log('YOU CLICKED: ' + button.text);
+    },
+
     onRadioStationsPanelBeforeRender: function(panel, options) {
-        console.log("ENTERED onRadioStationsPanelBeforeRender");
+        var me = this;
+        var radioStationsStore = this.getRadioStationsStore();
+        radioStationsStore.load({
+            callback: function(records, operation, success) {
+                if (success === true) {
+                    radioStationsStore.each(function(record) {
+                        var number = record.data.number;
+                        var description = record.data.description;
+                        var button = Ext.create('Ext.button.Button', {
+                            text: number,
+                            tooltip: description,
+                            handler: me.buttonHandler
+                        });
+                        panel.add(button);
+                    });
+                } else {
+                    console.log('error: had a problem reading the radioStationsStore');
+                }
+            }
+        });
     },
 
     onRadioStationsPanelRender: function(panel, options) {

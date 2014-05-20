@@ -5,13 +5,17 @@ Ext.define('Radio.store.RadioStations', {
 
     proxy: {
         type: 'ajax',
-        url: '/server/getRadioStations',
+        url: '/radio/data/radioStations.json',
         method: 'GET',
-        noCache: false,
         reader: {
             type: 'json'
             //root: 'results'
-        }
+        },
+        // get these variables out of the GET url
+        noCache: false,
+        limitParam: undefined,
+        pageParam: undefined,
+        startParam: undefined,
     }
 
 });
