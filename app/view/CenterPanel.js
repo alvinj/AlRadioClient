@@ -32,13 +32,5 @@ Ext.define('Radio.view.CenterPanel', {
         }
     ]
 
-    // items: [
-    //     {
-    //         xtype: 'panel',
-    //         closable: false,
-    //         layout: 'fit'
-    //     }
-    // ]
-
 });
 

@@ -1,4 +1,4 @@
-Ext.define('Radio.controller.Radio', {
+Ext.define('Radio.controller.RadioStations', {
     extend: 'Ext.app.Controller',
 
     requires: [
@@ -56,8 +56,13 @@ Ext.define('Radio.controller.Radio', {
                         var description = record.data.description;
                         var button = Ext.create('Ext.button.Button', {
                             text: number,
+                            scale: 'large',
                             tooltip: description,
-                            handler: me.buttonHandler
+                            handler: me.buttonHandler,
+                            style: {
+                                'margin': '8px'
+                            },
+
                         });
                         panel.add(button);
                     });

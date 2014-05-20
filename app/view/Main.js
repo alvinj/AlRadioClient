@@ -13,6 +13,12 @@ Ext.define('Radio.view.Main', {
         type: 'border'
     },
 
+    style: {
+        'margin': '50px',
+        'margin-left': '150px',
+        'margin-right': '150px'
+    },
+
     items: [
         {
             region: 'north',
@@ -21,8 +27,7 @@ Ext.define('Radio.view.Main', {
         },
         {
             region: 'center',
-            xtype: 'centerPanel',
-            title: 'center panel'
+            xtype: 'centerPanel'
         },
         {
             region: 'south',

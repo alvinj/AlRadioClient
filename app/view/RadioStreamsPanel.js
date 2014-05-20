@@ -9,8 +9,8 @@ Ext.define('Radio.view.RadioStreamsPanel', {
         {
             xtype: 'panel',
             closable: false,
-            layout: 'fit',
-            html: '<p>radio <em>stream</em> buttons go here ...</p>'
+            layout: 'hbox'
+            // html: '<p>radio <em>stream</em> buttons go here ...</p>'
         }
     ]
 });

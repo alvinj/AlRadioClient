@@ -4,14 +4,17 @@ Ext.define('Radio.Application', {
     extend: 'Ext.app.Application',
 
     views: [
-        'Radio.view.RadioStationsPanel'
+        'Radio.view.RadioStationsPanel',
+        'Radio.view.RadioStreamsPanel'
     ],
 
     controllers: [
-        'Radio.controller.Radio'
+        'Radio.controller.RadioStations',
+        'Radio.controller.RadioStreams'
     ],
 
     stores: [
-        'Radio.store.RadioStations'
+        'Radio.store.RadioStations',
+        'Radio.store.RadioStreams'
     ]
 });
