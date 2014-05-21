@@ -4,9 +4,16 @@
     Sencha Cmd when upgrading.
 */
 
+Ext.Loader.setConfig({
+    enabled: true,
+    paths: {
+        'VP.util': 'app/util/VP'
+    }
+});
+
+
 Ext.application({
     name: 'Radio',
-
     extend: 'Radio.Application',
     
     autoCreateViewport: true

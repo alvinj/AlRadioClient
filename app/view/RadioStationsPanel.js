@@ -6,22 +6,12 @@ Ext.define('Radio.view.RadioStationsPanel', {
 	renderTo: Ext.getBody(),
 
     layout: {
-        type: 'hbox'
-    },
-
-    // style: {
-    //     'margin': '50px',
-    //     'margin-left': '100px'
-    // },
-
-    // items: [
-    //     {
-    //         xtype: 'panel',
-    //         closable: false,
-    //         layout: 'fit'
-    //         // html: '<p>radio station buttons go here ...</p>'
-    //     }
-    // ]
+        type: 'hbox',
+        pack: 'center',
+        align: 'center',
+        padding: '20px'
+        // margins: '5 5 0 5',
+    }
 
 });
 

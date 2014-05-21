@@ -3,15 +3,15 @@ Ext.define('Radio.view.RadioStreamsPanel', {
     alias: 'widget.radioStreamsPanel',
 
     // TODO i don't know what this line does, or if it's really needed
-	renderTo: Ext.getBody(),
+    renderTo: Ext.getBody(),
 
-    items: [
-        {
-            xtype: 'panel',
-            closable: false,
-            layout: 'hbox'
-            // html: '<p>radio <em>stream</em> buttons go here ...</p>'
-        }
-    ]
+    layout: {
+        type: 'hbox',
+        pack: 'center',
+        align: 'center',
+        padding: '20px'
+        // margins: '5 5 0 5',
+    }
+
 });
 

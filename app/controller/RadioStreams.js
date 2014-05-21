@@ -52,9 +52,10 @@ Ext.define('Radio.controller.RadioStreams', {
                             text: name,
                             scale: 'large',
                             tooltip: name,
+                            cls: 'radioStreamButton',
                             handler: me.buttonHandler,
                             style: {
-                                'margin': '8px'
+                                'margin': '12px'
                             },
 
                         });

@@ -23,7 +23,7 @@ Ext.define('Radio.view.Main', {
         {
             region: 'north',
             xtype: 'vcrControlPanel',
-            title: 'north'
+            title: 'controls'
         },
         {
             region: 'center',

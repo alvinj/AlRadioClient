@@ -2,6 +2,7 @@ Ext.define('Radio.controller.RadioStations', {
     extend: 'Ext.app.Controller',
 
     requires: [
+        'VP.util.Util',
         'Radio.view.RadioStationsPanel'
     ],
 
@@ -28,10 +29,6 @@ Ext.define('Radio.controller.RadioStations', {
 
     init: function(application) {
         this.control({
-            // "login form button#submit": {
-            //     click: this.onButtonClickSubmit
-            // },
-
             // more events: activate, afterrender, beforerender, beforestaterestore, enable,
             // render, show, staterestore
             'radioStationsPanel': {
@@ -43,6 +40,24 @@ Ext.define('Radio.controller.RadioStations', {
 
     buttonHandler: function(button) {
         console.log('YOU CLICKED: ' + button.text);
+        Ext.Ajax.request({
+            url: '/server/tuneRadio/' + button.text,
+            method: 'GET',
+            success: function(conn, response, options, eOpts) {
+                var result = VP.util.Util.decodeJSON(conn.responseText);
+                if (result.success) {
+                    console.log('SUCCESS!');
+                    // TODO change the button ui to indicate that the button is active
+                } else {
+                    console.log('ERROR!');
+                    VP.util.Util.showErrorMsg(result.msg);
+                }
+            },
+            failure: function(conn, response, options, eOpts) {
+                // TODO get the 'msg' from the json and display it
+                VP.util.Util.showErrorMsg(conn.responseText);
+            }
+        });
     },
 
     onRadioStationsPanelBeforeRender: function(panel, options) {
@@ -57,12 +72,13 @@ Ext.define('Radio.controller.RadioStations', {
                         var button = Ext.create('Ext.button.Button', {
                             text: number,
                             scale: 'large',
+                            // iconCls:'questionIcon',
                             tooltip: description,
                             handler: me.buttonHandler,
                             style: {
-                                'margin': '8px'
-                            },
-
+                                // height: '60px',
+                                'margin': '12px'
+                            }
                         });
                         panel.add(button);
                     });
