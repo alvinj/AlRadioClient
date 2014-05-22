@@ -17,7 +17,10 @@ Ext.application({
     extend: 'Radio.Application',
     
     requires: [
-        'Ext.form.Panel'
+        'Ext.form.Panel',
+        'Ext.grid.Panel',
+        'Ext.slider.Single',
+        // 'Radio.store.RecordedStreams'
     ],
 
     autoCreateViewport: true

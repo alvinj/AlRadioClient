@@ -1,19 +1,27 @@
 Ext.define('Radio.view.RecordedStreamsPanel', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.grid.Panel',
     alias: 'widget.recordedStreamsPanel',
+
+    // TODO - create this:
+    store: Ext.create('Radio.store.RecordedStreams'),
 
     // TODO i don't know what this line does, or if it's really needed
 	renderTo: Ext.getBody(),
 
-    layout: {
-        type: 'hbox',
-        pack: 'center',
-        align: 'center',
-        padding: '20px'
-    },
+    // layout: {
+    //     type: 'hbox',
+    //     pack: 'center',
+    //     align: 'center',
+    //     padding: '20px'
+    // },
 
-    html: '<center><p><font color="#ccc">get recorded streams working!</font></p></center>'
-
+    columns: [
+        {
+            text: 'Filename',
+            width: 1000,
+            dataIndex: 'filename'
+        }
+    ]
 
 });
 

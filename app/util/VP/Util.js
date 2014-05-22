@@ -26,6 +26,15 @@ Ext.define('VP.util.Util', {
                 icon: Ext.Msg.ERROR,
                 buttons: Ext.Msg.OK
             });
+        },
+
+        dumpObject: function(obj) {
+            var output, property;
+            for (property in obj) {
+                output += property + ': ' + obj[property] + '; ';
+            }
+            console.log(output);
         }
+
     }
 });

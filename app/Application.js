@@ -11,7 +11,8 @@ Ext.define('Radio.Application', {
     controllers: [
         'Radio.controller.RadioStations',
         'Radio.controller.RadioStreams',
-        'Radio.controller.VcrController'
+        'Radio.controller.VcrController',
+        'Radio.controller.RecordedStreamsController'
     ],
 
     stores: [

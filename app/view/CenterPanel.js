@@ -36,7 +36,7 @@ Ext.define('Radio.view.CenterPanel', {
         {
             xtype: 'recordedStreamsPanel',
             title: 'recorded streams',
-            flex: 1
+            flex: 1.2
         },
         {
             xtype: 'pandoraPanel',
