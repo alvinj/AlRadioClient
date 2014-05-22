@@ -49,9 +49,24 @@ Ext.define('Radio.view.VcrControlPanel', {
             text: '>>|',
             itemId: 'btnEnd',
             tooltip: 'End'
+        },
+        {
+            xtype: 'slider',
+            itemId: 'volumeSlider',
+            width: 200,
+            value: 50,
+            increment: 10,
+            minValue: 0,
+            maxValue: 100,
+            margin: 10
         }
     ]
 });
+
+
+
+
+
 
 
 

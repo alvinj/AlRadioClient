@@ -29,8 +29,15 @@ Ext.define('Radio.controller.VcrController', {
             },
             'button#btnPlayPause': {
                 click: this.onPlayPauseButtonClicked
+            },
+            'slider#volumeSlider': {
+                changecomplete: this.onVolumeSliderChangeComplete
             }
         });
+    },
+
+    onVolumeSliderChangeComplete: function(slider, newValue, thumb, eOpts) {
+        console.log('new slider value: ' + newValue);
     },
 
     onPlayPauseButtonClicked: function(button) {
