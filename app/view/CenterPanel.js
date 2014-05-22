@@ -11,7 +11,10 @@ Ext.define('Radio.view.CenterPanel', {
 
     requires:[
         'Radio.view.RadioStationsPanel',
-        'Radio.view.RadioStreamsPanel'
+        'Radio.view.RadioStreamsPanel',
+        'Radio.view.PandoraPanel',
+        'Radio.view.PodcastsPanel',
+        'Radio.view.RecordedStreamsPanel'
     ],
 
     layout: {
@@ -28,6 +31,21 @@ Ext.define('Radio.view.CenterPanel', {
         {
             xtype: 'radioStreamsPanel',
             title: 'streams',
+            flex: 1
+        },
+        {
+            xtype: 'pandoraPanel',
+            title: 'pandora',
+            flex: 1
+        },
+        {
+            xtype: 'podcastsPanel',
+            title: 'podcasts',
+            flex: 1
+        },
+        {
+            xtype: 'recordedStreamsPanel',
+            title: 'recorded streams',
             flex: 1
         }
     ]

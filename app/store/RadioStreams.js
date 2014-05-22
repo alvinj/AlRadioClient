@@ -5,7 +5,7 @@ Ext.define('Radio.store.RadioStreams', {
 
     proxy: {
         type: 'ajax',
-        url: '/radio/data/radioStreams.json',
+        url: '/server/getRadioStreams',
         method: 'GET',
         reader: {
             type: 'json'

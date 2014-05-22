@@ -1,5 +1,5 @@
 Ext.define('Radio.view.VcrControlPanel', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.form.Panel',
     alias: 'widget.vcrControlPanel',
 
     // TODO i don't know what this line does, or if it's really needed
@@ -52,4 +52,8 @@ Ext.define('Radio.view.VcrControlPanel', {
         }
     ]
 });
+
+
+
+
 

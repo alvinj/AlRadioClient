@@ -5,11 +5,10 @@ Ext.define('Radio.store.RadioStations', {
 
     proxy: {
         type: 'ajax',
-        url: '/radio/data/radioStations.json',
+        url: '/server/getRadioStations',
         method: 'GET',
         reader: {
             type: 'json'
-            //root: 'results'
         },
         // get these variables out of the GET url
         noCache: false,

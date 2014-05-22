@@ -10,7 +10,8 @@ Ext.define('Radio.Application', {
 
     controllers: [
         'Radio.controller.RadioStations',
-        'Radio.controller.RadioStreams'
+        'Radio.controller.RadioStreams',
+        'Radio.controller.VcrController'
     ],
 
     stores: [

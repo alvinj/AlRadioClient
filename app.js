@@ -16,5 +16,9 @@ Ext.application({
     name: 'Radio',
     extend: 'Radio.Application',
     
+    requires: [
+        'Ext.form.Panel'
+    ],
+
     autoCreateViewport: true
 });

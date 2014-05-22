@@ -10,7 +10,7 @@ Ext.define('Radio.view.StatusPanel', {
             xtype: 'panel',
             closable: false,
             layout: 'fit',
-            html: '<p>status information goes here ...</p>'
+            html: '<center><p><font color="#ccc">status information goes here ...</font></p></center>'
         }
     ]
 });

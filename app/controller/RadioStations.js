@@ -41,7 +41,7 @@ Ext.define('Radio.controller.RadioStations', {
     buttonHandler: function(button) {
         console.log('YOU CLICKED: ' + button.text);
         Ext.Ajax.request({
-            url: '/server/tuneRadio/' + button.text,
+            url: '/server/tuneRadio?station=' + button.text,
             method: 'GET',
             success: function(conn, response, options, eOpts) {
                 var result = VP.util.Util.decodeJSON(conn.responseText);

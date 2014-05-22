@@ -14,7 +14,7 @@ Ext.define('Radio.view.Main', {
     },
 
     style: {
-        'margin': '50px',
+        'margin': '20px',
         'margin-left': '150px',
         'margin-right': '150px'
     },
