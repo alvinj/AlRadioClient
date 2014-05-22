@@ -22,18 +22,24 @@ Ext.define('Radio.view.VcrControlPanel', {
 
     defaults: {
         xtype: 'button',
-        margin: 6
+        margin: 2
     },
     items: [
         {
-            text: '|<<',
-            itemId: 'btnBeginning',
-            tooltip: 'Beginning'
+            text: '30m',
+            itemId: 'back30m'
         },
         {
-            text: '<<',
-            itemId: 'btnRewind',
-            tooltip: 'Rewind'
+            text: '10m',
+            itemId: 'back10m',
+        },
+        {
+            text: '1m',
+            itemId: 'back1m',
+        },
+        {
+            text: '10s',
+            itemId: 'back10s',
         },
         {
             text: '>',
@@ -41,21 +47,27 @@ Ext.define('Radio.view.VcrControlPanel', {
             tooltip: 'Play/Pause'
         },
         {
-            text: '>>',
-            itemId: 'btnFastForward',
-            tooltip: 'Fast-forward'
+            text: '10s',
+            itemId: 'forward10s'
         },
         {
-            text: '>>|',
-            itemId: 'btnEnd',
-            tooltip: 'End'
+            text: '1m',
+            itemId: 'forward1m',
+        },
+        {
+            text: '10m',
+            itemId: 'forward10m',
+        },
+        {
+            text: '30m',
+            itemId: 'forward30m',
         },
         {
             xtype: 'slider',
             itemId: 'volumeSlider',
-            width: 200,
-            value: 50,
-            increment: 10,
+            width: 300,
+            value: 80,
+            increment: 5,
             minValue: 0,
             maxValue: 100,
             margin: 10

@@ -9,7 +9,7 @@ Ext.define('Radio.view.RadioStationsPanel', {
         type: 'hbox',
         pack: 'center',
         align: 'center',
-        padding: '20px'
+        padding: '10px'
         // margins: '5 5 0 5',
     }
 
