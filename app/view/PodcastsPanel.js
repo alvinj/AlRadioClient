@@ -5,6 +5,7 @@ Ext.define('Radio.view.PodcastsPanel', {
     store: Ext.create('Radio.store.Podcasts'),
 
     renderTo: Ext.getBody(),
+    hideHeaders: true,
 
     columns: [
         {
