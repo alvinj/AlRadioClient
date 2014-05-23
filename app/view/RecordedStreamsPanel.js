@@ -8,13 +8,6 @@ Ext.define('Radio.view.RecordedStreamsPanel', {
     // TODO i don't know what this line does, or if it's really needed
 	renderTo: Ext.getBody(),
 
-    // layout: {
-    //     type: 'hbox',
-    //     pack: 'center',
-    //     align: 'center',
-    //     padding: '20px'
-    // },
-
     columns: [
         {
             text: 'Filename',

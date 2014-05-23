@@ -5,7 +5,8 @@ Ext.define('Radio.controller.VcrController', {
     extend: 'Ext.app.Controller',
 
     requires: [
-        'Radio.view.VcrControlPanel'
+        'Radio.view.VcrControlPanel',
+        'VP.util.Util'
     ],
 
     views: [
@@ -32,9 +33,58 @@ Ext.define('Radio.controller.VcrController', {
             },
             'slider#volumeSlider': {
                 changecomplete: this.onVolumeSliderChangeComplete
-            }
+            },
+            'button#back30m':    { click: this.onBack30mClicked },
+            'button#back10m':    { click: this.onBack10mClicked },
+            'button#back1m':     { click: this.onBack1mClicked },
+            'button#back10s':    { click: this.onBack10sClicked },
+            'button#forward10s': { click: this.onForward10sClicked },
+            'button#forward1m':  { click: this.onForward1mClicked },
+            'button#forward10m': { click: this.onForward10mClicked },
+            'button#forward30m': { click: this.onForward30mClicked}
         });
     },
+
+    onBack30mClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '-1800' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
+    onBack10mClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '-600' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
+    onBack1mClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '-60' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
+    onBack10sClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '-10' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
+    onForward10sClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '+10' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
+    onForward1mClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '+60' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
+    onForward10mClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '+600' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
+    onForward30mClicked: function(button) {
+        var encoded = Ext.urlEncode({ value: '+1800' });
+        VP.util.Util.callRestUrl('/server/seek?' + encoded, 'GET')
+    },
+
 
     // TODO refactor these ajax calls (too much copy/paste)
     onVolumeSliderChangeComplete: function(slider, newValue, thumb, eOpts) {

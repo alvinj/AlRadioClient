@@ -1,4 +1,4 @@
-Ext.define('Radio.store.RecordedStreams', {
+Ext.define('Radio.store.Podcasts', {
     extend: 'Ext.data.Store',
 
     fields: [
@@ -7,8 +7,7 @@ Ext.define('Radio.store.RecordedStreams', {
 
     proxy: {
         type: 'ajax',
-        url: '/server/getRecordings',
-        method: 'GET',
+        url: '/server/getPodcasts',
         reader: {
             type: 'json'
         },

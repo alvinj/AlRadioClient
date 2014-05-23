@@ -34,7 +34,29 @@ Ext.define('VP.util.Util', {
                 output += property + ': ' + obj[property] + '; ';
             }
             console.log(output);
-        }
+        },
+
+        // `method` is typically 'GET' or 'POST'
+        callRestUrl: function(theUrl, theMethod) {
+            Ext.Ajax.request({
+                url: theUrl,
+                method: theMethod,
+                success: function(conn, response, options, eOpts) {
+                    var result = VP.util.Util.decodeJSON(conn.responseText);
+                    if (result.success) {
+                        // ignore
+                    } else {
+                        VP.util.Util.showErrorMsg(result.msg);
+                    }
+                },
+                failure: function(conn, response, options, eOpts) {
+                    // TODO get the 'msg' from the json and display it
+                    VP.util.Util.showErrorMsg(conn.responseText);
+                }
+            });
+        },
+
+
 
     }
 });

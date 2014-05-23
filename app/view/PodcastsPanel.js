@@ -1,19 +1,19 @@
 Ext.define('Radio.view.PodcastsPanel', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.grid.Panel',
     alias: 'widget.podcastsPanel',
 
-    // TODO i don't know what this line does, or if it's really needed
-	renderTo: Ext.getBody(),
+    store: Ext.create('Radio.store.Podcasts'),
 
-    layout: {
-        type: 'hbox',
-        pack: 'center',
-        align: 'center',
-        padding: '20px'
-    },
+    renderTo: Ext.getBody(),
 
-    html: '<center><p><font color="#ccc">get podcasts working!</font></p></center>'
-
+    columns: [
+        {
+            text: 'Filename',
+            width: 1000,
+            dataIndex: 'filename'
+        }
+    ]
 
 });
+
 
