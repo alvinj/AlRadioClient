@@ -90,7 +90,7 @@ Ext.define('Radio.controller.RadioStations', {
     },
 
     onRadioStationsPanelRender: function(panel, options) {
-        console.log("ENTERED onRadioStationsPanelRender");
+        // console.log("ENTERED onRadioStationsPanelRender");
     }
 
 

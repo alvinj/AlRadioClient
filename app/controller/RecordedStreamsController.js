@@ -27,8 +27,9 @@ Ext.define('Radio.controller.RecordedStreamsController', {
 
     onRecordedStreamsPanelItemClick: function(grid, record, item, index, e, eOpts) {
         var filename = record.data.filename;
+        var encodedFilename = Ext.urlEncode({ recordingFilename: filename });
         Ext.Ajax.request({
-            url: '/server/playRecording?recordingFilename=' + filename,
+            url: '/server/playRecording?' + encodedFilename,
             method: 'GET',
             success: function(conn, response, options, eOpts) {
                 var result = VP.util.Util.decodeJSON(conn.responseText);

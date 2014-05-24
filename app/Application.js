@@ -3,21 +3,4 @@ Ext.define('Radio.Application', {
 
     extend: 'Ext.app.Application',
 
-    views: [
-        'Radio.view.RadioStationsPanel',
-        'Radio.view.RadioStreamsPanel'
-    ],
-
-    controllers: [
-        'Radio.controller.RadioStations',
-        'Radio.controller.RadioStreams',
-        'Radio.controller.VcrController',
-        'Radio.controller.RecordedStreamsController',
-        'Radio.controller.PodcastsController'
-    ],
-
-    stores: [
-        'Radio.store.RadioStations',
-        'Radio.store.RadioStreams'
-    ]
 });

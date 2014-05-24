@@ -1,9 +1,12 @@
 Ext.define('Radio.store.RecordedStreams', {
     extend: 'Ext.data.Store',
 
-    fields: [
-        {name: 'filename'}
-    ],
+    // fields: [
+    //     {name: 'filename'}
+    // ],
+
+    requires: 'Radio.model.RecordedStream',
+    model: 'Radio.model.RecordedStream',
 
     proxy: {
         type: 'ajax',
@@ -13,11 +16,11 @@ Ext.define('Radio.store.RecordedStreams', {
             type: 'json'
         },
         noCache: true,
-        limitParam: undefined,
-        pageParam: undefined,
-        startParam: undefined
+        // limitParam: undefined,
+        // pageParam: undefined,
+        // startParam: undefined
     },
 
-    autoLoad: true
+    // autoLoad: true
 
 });

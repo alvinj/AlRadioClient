@@ -1,13 +1,17 @@
 Ext.define('Radio.store.Podcasts', {
     extend: 'Ext.data.Store',
 
-    fields: [
-        {name: 'filename'}
-    ],
+    // fields: [
+    //     {name: 'filename'}
+    // ],
+
+    requires: 'Radio.model.Podcast',
+    model: 'Radio.model.Podcast',
 
     proxy: {
         type: 'ajax',
         url: '/server/getPodcasts',
+        method: 'GET',
         reader: {
             type: 'json'
         },
@@ -17,6 +21,6 @@ Ext.define('Radio.store.Podcasts', {
         startParam: undefined
     },
 
-    autoLoad: true
+    // autoLoad: true
 
 });

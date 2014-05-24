@@ -13,7 +13,16 @@ Ext.define('Radio.view.PodcastsPanel', {
             width: 1000,
             dataIndex: 'filename'
         }
-    ]
+    ],
+
+    initComponent: function(){
+        this.callParent();
+        this.on('render', this.loadStore, this);
+    },
+
+    loadStore: function() {
+        this.getStore().load();
+    }
 
 });
 

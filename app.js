@@ -20,7 +20,38 @@ Ext.application({
         'Ext.form.Panel',
         'Ext.grid.Panel',
         'Ext.slider.Single',
-        // 'Radio.store.RecordedStreams'
+        'Radio.store.RecordedStreams',
+        'Radio.store.Podcasts'
+    ],
+
+    views: [
+        'Radio.view.RadioStationsPanel',
+        'Radio.view.RadioStreamsPanel',
+        'Radio.view.RecordedStreamsPanel',
+        'Radio.view.PodcastsPanel',
+        'Radio.view.VcrControlPanel',
+    ],
+
+    controllers: [
+        'Radio.controller.RadioStations',
+        'Radio.controller.RadioStreams',
+        'Radio.controller.VcrController',
+        'Radio.controller.RecordedStreamsController',
+        'Radio.controller.PodcastsController'
+    ],
+
+    models: [
+        'Radio.model.RadioStation',
+        'Radio.model.RadioStream',
+        'Radio.model.RecordedStream',
+        'Radio.model.Podcast'
+    ],
+
+    stores: [
+        'Radio.store.RadioStations',
+        'Radio.store.RadioStreams',
+        'Radio.store.RecordedStreams',
+        'Radio.store.Podcasts'
     ],
 
     autoCreateViewport: true
