@@ -13,10 +13,12 @@ Ext.define('Radio.view.Main', {
         type: 'border'
     },
 
+    autoScroll: true,
+
     style: {
         'margin': '20px',
-        'margin-left': '150px',
-        'margin-right': '150px'
+        'margin-left': '5%',
+        'margin-right': '5%'
     },
 
     items: [

@@ -43,11 +43,11 @@ Ext.define('Radio.view.CenterPanel', {
             title: 'podcasts',
             flex: 1.2
         },
-        {
-            xtype: 'pandoraPanel',
-            title: 'pandora',
-            flex: 1
-        }
+        // {
+        //     xtype: 'pandoraPanel',
+        //     title: 'pandora',
+        //     flex: 0.5
+        // }
     ]
 
 });
